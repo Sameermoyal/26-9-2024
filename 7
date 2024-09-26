@@ -1,0 +1,55 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Course{
+    string name;
+    public:
+        
+        Course(string mode){
+            name= mode;
+        }
+        
+        string sol(){
+            return name;
+        }
+        
+};
+
+class OnlineCourse: public Course{
+    public:
+        OnlineCourse(string mode):Course(mode){}
+        
+        void getformate(){
+            cout<<sol()<<endl;
+        }
+};
+
+class InPersonCourse: public Course{
+    public:
+        InPersonCourse(string mode):Course(mode){}
+        
+        void getformate(){
+            cout<<sol()<<endl;
+        }
+};
+
+class HybridCourse: public Course{
+    public:
+        HybridCourse(string mode):Course(mode){}
+        
+        void getformate(){
+            cout<<sol()<<endl;
+        }
+};
+
+int main(){
+
+    OnlineCourse obj1("online");
+    InPersonCourse obj2("InPerson");
+    HybridCourse obj3("hybrid");
+    obj1.getformate();
+    obj2.getformate();
+    obj3.getformate();
+    
+    return 0;
+}

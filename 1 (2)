@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Product{
+int productid ;
+int price;
+public:
+    Product(int id, int pri){
+        productid=id;
+        price=pri;
+    }
+    int sol(){
+        return price;
+    }
+};
+
+class Electronics : public Product{
+public:
+    Electronics(int id , int pri):Product(id, pri){};
+    void getPrice(){
+        cout<<sol()<<endl;
+    }
+};
+
+int main(){
+
+    Electronics obj1(1, 50);
+    obj1.getPrice();
+    return 0;
+}

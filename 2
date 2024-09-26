@@ -1,0 +1,29 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class House{
+string address;
+public:
+    House(string add){
+        address=add;
+    }
+    string sol(){
+        return address;
+    }
+};
+
+class Apartment : public House{
+public:
+    Apartment(string add):House(add){};
+    void getAddress(){
+        cout<<sol()<<endl;
+    }
+};
+
+int main(){
+
+    Apartment obj1("merta");
+    obj1.getAddress();
+    return 0;
+}

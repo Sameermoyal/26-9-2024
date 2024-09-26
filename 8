@@ -1,0 +1,55 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Device{
+    string model;
+    public:
+        
+        Device(string mod){
+            model= mod;
+        }
+        
+        string sol(){
+            return model;
+        }
+        
+};
+
+class Smartphone: public Device{
+    public:
+        Smartphone(string mod):Device(mod){}
+        
+        void getmodel(){
+            cout<<sol()<<endl;
+        }
+};
+
+class Tablet: public Device{
+    public:
+        Tablet(string mod):Device(mod){}
+        
+        void getmodel(){
+            cout<<sol()<<endl;
+        }
+};
+
+class Smartwatch: public Device{
+    public:
+        Smartwatch(string mod):Device(mod){}
+        
+        void getmodel(){
+            cout<<sol()<<endl;
+        }
+};
+
+int main(){
+
+    Smartphone obj1("mobile");
+    Tablet obj2("tablet");
+    Smartwatch obj3("watch");
+    obj1.getmodel();
+    obj2.getmodel();
+    obj3.getmodel();
+    
+    return 0;
+}
